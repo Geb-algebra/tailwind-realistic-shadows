@@ -29,24 +29,20 @@ export default function Home() {
 	const { theme, setTheme } = useTheme();
 	return (
 		<div className={cn(styles.layout)}>
-			<div className={cn(styles.sidebar)}>
+			<div className={cn(styles.header)}>
 				<h1
 					className={cn(
 						styles.title,
-						"font-bold text-2xl p-6 h-42 w-48 grid place-items-center m-2 rounded-3xl shadow-realistic-edge-float backdrop-blur-sm z-10",
+						"font-bold h-fit w-fit min-h-12 px-4 py-2 grid place-items-center rounded-2xl shadow-realistic-edge-float backdrop-blur-sm z-10",
 					)}
 				>
-					Tailwind
-					<br />
-					Realistic
-					<br />
-					Shadows
+					Tailwind Realistic Shadows
 				</h1>
 				<div
 					className={cn(
 						styles.theme,
 						"flex items-center space-x-2",
-						"m-2 h-12 rounded-full shadow-realistic-edge-float backdrop-blur-sm z-10",
+						"h-12 rounded-2xl shadow-realistic-edge-float backdrop-blur-sm z-10",
 					)}
 				>
 					<SunIcon size={16} />
@@ -63,10 +59,10 @@ export default function Home() {
 					className={cn(
 						styles.about,
 						"flex items-center space-x-2",
-						"m-2 p-2 h-fit rounded-full shadow-realistic-edge-float backdrop-blur-sm z-10",
+						"p-1 h-12 rounded-xl shadow-realistic-edge-float backdrop-blur-sm z-10",
 					)}
 				>
-					<Button variant="ghost" size="icon" className="rounded-full p-0" asChild>
+					<Button variant="ghost" size="icon" className="rounded-md p-0" asChild>
 						<a
 							href="https://github.com/GebAlgebra/tailwind-realistic-shadows"
 							target="_blank"
@@ -75,7 +71,7 @@ export default function Home() {
 							<GitHub color="black" className="size-6" />
 						</a>
 					</Button>
-					<Button variant="ghost" size="icon" className="rounded-full p-0" asChild>
+					<Button variant="ghost" size="icon" className="rounded-md p-0" asChild>
 						<a href="https://geb1024.com" target="_blank" rel="noreferrer">
 							<CircleUserRoundIcon size={16} className="size-6" />
 						</a>
@@ -249,7 +245,7 @@ export default function Home() {
 		0px 20px 20px -10px var(--realistic-shadow);
 }"
 					examples={
-						<Card className="w-128 h-92">
+						<Card className="w-full max-w-128 h-92">
 							<CardHeader>
 								<CardTitle>Edge Float</CardTitle>
 							</CardHeader>
@@ -280,7 +276,7 @@ export default function Home() {
 		0px 4px 4px var(--realistic-light);
 }"
 					examples={
-						<div className="flex items-center gap-2">
+						<div className="flex items-center flex-col gap-8 w-fit">
 							<div className="shadow-realistic-mound w-64 h-2 rounded-full" />
 							<div className="shadow-realistic-depression w-64 h-32 rounded-xl bg-background p-2">
 								<div className="shadow-realistic-mound w-full h-full rounded-md bg-background p-4">

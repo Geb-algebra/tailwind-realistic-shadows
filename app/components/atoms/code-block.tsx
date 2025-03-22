@@ -3,7 +3,7 @@ import { Button } from "./button";
 
 export function CodeBlock(props: { code: string; copyable?: boolean }) {
 	return (
-		<pre className="relative bg-muted rounded-md p-4 m-4 overflow-auto text-sm shadow-realistic-hole">
+		<pre className="relative w-full max-w-[calc(100vw-92px)] box-border bg-muted rounded-md p-4 m-4 overflow-auto text-sm shadow-realistic-hole">
 			<code>{props.code}</code>
 			{props.copyable && (
 				<Button

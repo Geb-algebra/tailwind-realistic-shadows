@@ -1,33 +1,31 @@
 .layout {
 	display: grid;
-	grid-template-columns: 256px 1fr 256px;
-	grid-template-areas: "sidebar main .";
-	overflow: auto;
-	height: 100%;
-	position: relative;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: "header" "main";
+	margin: 0 auto;
+	padding: 0 24px;
+	width: 100%;
+	max-width: 768px;
 }
 
-.sidebar {
-	grid-area: sidebar;
-	grid-template-rows: auto auto auto;
+.header {
+	grid-area: header;
+	grid-template-columns: 1fr auto;
 	align-content: top;
-	grid-template-areas:
-		"title"
-		"theme"
-		"about";
+	gap: 8px;
+	grid-template-areas: "title theme" "title  about";
 	display: grid;
-	gap: 24px;
 	position: sticky;
-	top: 0;
-	padding: 24px;
+	top: 8px;
 	height: fit-content;
+	z-index: 9999;
 }
 
 .main {
 	grid-area: main;
 	display: grid;
 	gap: 64px;
-	margin: 64px 0;
+	margin-top: 64px;
 }
 
 .title {

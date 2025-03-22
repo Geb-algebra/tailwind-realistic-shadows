@@ -46,7 +46,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
 	const { theme } = useTheme();
 	return (
-		<div className={cn("w-full h-full bg-background text-foreground", theme === "dark" && "dark")}>
+		<div
+			className={cn(
+				"w-full h-full bg-background text-foreground overflow-auto relative",
+				theme === "dark" && "dark",
+			)}
+		>
 			<Outlet />
 		</div>
 	);
