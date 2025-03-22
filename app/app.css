@@ -21,24 +21,24 @@ body {
 :root {
 	--hue: 240;
 
-	--background: oklch(95% 0.01 var(--hue));
+	--background: oklch(90% 0.01 var(--hue));
 	--foreground: oklch(40% 0.04 var(--hue));
-	--card: oklch(98% 0.005 var(--hue));
+	--card: oklch(93% 0.005 var(--hue));
 	--inner-card: oklch(95% 0.005 var(--hue));
 	--card-foreground: var(--foreground);
 	--popover: var(--background);
 	--popover-foreground: var(--foreground);
 	--primary: oklch(40% 0.09 var(--hue));
 	--primary-foreground: oklch(90% 0.02 var(--hue));
-	--secondary: oklch(90% 0.03 var(--hue));
+	--secondary: oklch(85% 0.03 var(--hue));
 	--secondary-foreground: oklch(30% 0.09 var(--hue));
-	--muted: oklch(92% 0.015 var(--hue));
+	--muted: oklch(88% 0.015 var(--hue));
 	--muted-foreground: oklch(55% 0.03 var(--hue));
-	--accent: oklch(85% 0.03 var(--hue));
+	--accent: oklch(80% 0.03 var(--hue));
 	--accent-foreground: var(--secondary-foreground);
 	--destructive: oklch(40% 0.1212 15);
 	--destructive-foreground: oklch(80% 0.1212 15);
-	--border: oklch(90% 0.01 var(--hue));
+	--border: oklch(80% 0.01 var(--hue));
 	--input: var(--border);
 	--ring: oklch(80% 0.03 var(--hue));
 	/* --chart-1: oklch(12 76% 61%);
@@ -47,6 +47,8 @@ body {
   --chart-4: oklch(43 74% 66%);
   --chart-5: oklch(27 87% 67%); */
 	--radius: 0.6rem;
+	--realistic-light: #ffffff80;
+	--realistic-shadow: #00000030;
 }
 
 .dark {
@@ -74,6 +76,8 @@ body {
 	--chart-3: oklch(30 80% 55%);
 	--chart-4: oklch(280 65% 60%);
 	--chart-5: oklch(340 75% 55%); */
+	--realistic-light: #ffffff40;
+	--realistic-shadow: #00000080;
 }
 
 @theme inline {
@@ -122,4 +126,47 @@ body {
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+@utility shadow-realistic-box {
+	box-shadow:
+		inset 0px -2px 2px var(--realistic-shadow), inset 0px 2px 2px var(--realistic-light), 0px 2px
+		5px var(--realistic-shadow);
+}
+
+@utility shadow-realistic-button {
+	box-shadow:
+		inset 0px -2px 2px var(--realistic-shadow), inset 0px 2px 2px var(--realistic-light), 0px 2px
+		5px var(--realistic-shadow),
+		-0px -1px 1px var(--realistic-shadow);
+}
+
+@utility shadow-realistic-button-pressed {
+	box-shadow: -0px -1px 1px var(--realistic-shadow), 0px 1px 1px var(--realistic-light);
+}
+
+@utility shadow-realistic-hole {
+	box-shadow:
+		0px 1px 1px var(--realistic-light), -0px -1px 1px var(--realistic-shadow), inset 0px 1px 1px
+		var(--realistic-shadow);
+}
+
+@utility shadow-realistic-edge {
+	box-shadow:
+		inset 0px 1px 1px var(--realistic-light), inset -0px -1px 1px var(--realistic-shadow), 0px 1px
+		1px var(--realistic-shadow);
+}
+
+@utility shadow-realistic-edge-float {
+	box-shadow:
+		inset 0px 1px 1px var(--realistic-light), inset -0px -1px 1px var(--realistic-shadow), 0px 20px
+		20px -10px var(--realistic-shadow);
+}
+
+@utility shadow-realistic-depression {
+	box-shadow: inset 0px -4px 4px var(--realistic-light), inset -0px 4px 4px var(--realistic-shadow);
+}
+
+@utility shadow-realistic-mound {
+	box-shadow: 0px 4px 4px var(--realistic-shadow), 0px -4px 4px var(--realistic-light);
 }

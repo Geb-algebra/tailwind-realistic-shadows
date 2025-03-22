@@ -1,0 +1,48 @@
+.layout {
+	display: grid;
+	grid-template-columns: 256px 1fr 256px;
+	grid-template-areas: "sidebar main .";
+	overflow: auto;
+	height: 100%;
+	position: relative;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	grid-template-rows: auto auto auto;
+	align-content: top;
+	grid-template-areas:
+		"title"
+		"theme"
+		"about";
+	display: grid;
+	gap: 24px;
+	position: sticky;
+	top: 0;
+	padding: 24px;
+	height: fit-content;
+}
+
+.main {
+	grid-area: main;
+	display: grid;
+	gap: 64px;
+	margin: 64px 0;
+}
+
+.title {
+	grid-area: title;
+}
+
+.theme {
+	grid-area: theme;
+	justify-self: center;
+	width: fit-content;
+	padding: 0 16px;
+}
+
+.about {
+	grid-area: about;
+	justify-self: center;
+	width: fit-content;
+}
