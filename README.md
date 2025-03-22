@@ -1,3 +1,7 @@
-# Frizz stack
+# Tailwind Realistic Shadows
 
-a minimal react-router v7 stack that can instantly be deployed to CloudFlare Workers
+This repository provides a collection of realistic shadow utilities for Tailwind CSS.
+
+See the website to check how they look like and how to use them.
+
+https://tw-real-shadows.geb1024.com

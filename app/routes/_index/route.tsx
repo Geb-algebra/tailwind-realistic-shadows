@@ -64,7 +64,7 @@ export default function Home() {
 				>
 					<Button variant="ghost" size="icon" className="rounded-md p-0" asChild>
 						<a
-							href="https://github.com/GebAlgebra/tailwind-realistic-shadows"
+							href="https://github.com/Geb-algebra/tailwind-realistic-shadows/tree/main"
 							target="_blank"
 							rel="noreferrer"
 						>
